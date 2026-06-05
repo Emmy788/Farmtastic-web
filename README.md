@@ -33,8 +33,8 @@ Farmtastic is a multi-page website designed for an agribusiness brand. Built as 
 ## Getting started
 
 ```bash
-git clone https://github.com/Emmy788/agribusiness-web.git
-cd agribusiness-web
+git clone https://github.com/Emmy788/Farmtastic-web.git
+cd Farmtastic-web
 ```
 
 Open `home.html` in your browser to view the project.
