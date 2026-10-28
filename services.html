@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmtastic Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/services.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <script src="https://kit.fontawesome.com/e405f872e6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="logos/Screenshot_14-3-2024_155557_looka.com.jpeg" alt="Farmtastic logo">
+            <ul class="header-nav">
+                <li class="hideOnMobile"><a href="home.html">Home</a></li>
+                <li class="hideOnMobile"><a href="about.html">About</a></li>
+                <li class="hideOnMobile"><a href="features.html">Features</a></li>
+                <li class="hideOnMobile"><a href="services.html" class="active">Services</a></li>
+                <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+                <div class="header-icons">
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <li class="menu-btn" onclick="showSidebar()"><a href="#" aria-label="Open menu"><i class="fa-solid fa-bars"></i></a></li>
+            </ul>
+            <ul class="sidebar">
+                <li onclick="hideSidebar()"><a href="#" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="services" aria-labelledby="services-title">
+            <div class="services-welcome" id="services-welcome" role="status" hidden>
+                <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+                <span id="services-welcome-name"></span>
+                <svg class="services-welcome-celebration" aria-hidden="true" viewBox="0 0 64 64" focusable="false">
+                    <circle cx="32" cy="35" r="22" fill="#ffd34e"/>
+                    <path d="M17 16 24 3l20 12-7 12z" fill="#e96761"/>
+                    <path d="m18.7 12.5 4-7.4 4.4 2.6-4 7.4z" fill="#66b9e8"/>
+                    <circle cx="42" cy="10" r="3" fill="#73bd72"/>
+                    <path d="M25 31c2-3 5-3 7 0m5 0c2-3 5-3 7 0" fill="none" stroke="#63452f" stroke-linecap="round" stroke-width="2.5"/>
+                    <path d="M23 39c4 8 15 11 22 2" fill="none" stroke="#63452f" stroke-linecap="round" stroke-width="3"/>
+                    <path d="m6 27 5 2m-4 6 5-1m43-16-3 4m7 1-4 2m-7 26 3 4" fill="none" stroke="#438d4b" stroke-linecap="round" stroke-width="3"/>
+                    <path d="m12 16 2-3m-4 2 4 2m39 35 2-3m-4 1 4 2" fill="none" stroke="#ed8a43" stroke-linecap="round" stroke-width="2"/>
+                </svg>
+            </div>
+            <div class="services-intro">
+                <p class="services-eyebrow">HOW WE CAN HELP</p>
+                <h1 id="services-title">Practical services for your farm</h1>
+                <p>From learning and expert advice to animal care and equipment, explore the support Farmtastic offers farmers.</p>
+            </div>
+            <div class="services-grid">
+                <article class="service-card">
+                    <img src="images/services-img-1.jpg" alt="Farmers taking part in a workshop" loading="lazy">
+                    <div class="service-card-content">
+                        <span class="service-card-icon"><i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i></span>
+                        <h2>Farming workshops</h2>
+                        <p>Learn practical ways to improve your farm with guidance from experienced agricultural specialists.</p>
+                    </div>
+                </article>
+                <article class="service-card">
+                    <img src="images/services-img-2.jpg" alt="Agricultural consultation on a farm" loading="lazy">
+                    <div class="service-card-content">
+                        <span class="service-card-icon"><i class="fa-solid fa-comments" aria-hidden="true"></i></span>
+                        <h2>Farming consultations</h2>
+                        <p>Talk one-to-one with an expert about your farm and get advice tailored to your needs.</p>
+                    </div>
+                </article>
+                <article class="service-card">
+                    <img src="images/services-img-3.jpg" alt="Organic fertilizer for farm use" loading="lazy">
+                    <div class="service-card-content">
+                        <span class="service-card-icon"><i class="fa-solid fa-seedling" aria-hidden="true"></i></span>
+                        <h2>Organic fertilizer</h2>
+                        <p>Find organic fertilizer to support healthy soil and sustainable crop growing.</p>
+                    </div>
+                </article>
+                <article class="service-card">
+                    <img src="images/services-img-4.jpg" alt="Veterinary care for a cow" loading="lazy">
+                    <div class="service-card-content">
+                        <span class="service-card-icon"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i></span>
+                        <h2>Veterinary services</h2>
+                        <p>Access animal health support, including check-ups and vaccinations for livestock and poultry.</p>
+                    </div>
+                </article>
+                <article class="service-card">
+                    <img src="images/services-img-5.jpg" alt="Farmers sharing ideas" loading="lazy">
+                    <div class="service-card-content">
+                        <span class="service-card-icon"><i class="fa-solid fa-people-group" aria-hidden="true"></i></span>
+                        <h2>Farmer connections</h2>
+                        <p>Connect with farmers to exchange ideas, build relationships, and explore opportunities together.</p>
+                    </div>
+                </article>
+                <article class="service-card">
+                    <img src="images/services-img-6.jpg" alt="Modern tractor ready for farm work" loading="lazy">
+                    <div class="service-card-content">
+                        <span class="service-card-icon"><i class="fa-solid fa-tractor" aria-hidden="true"></i></span>
+                        <h2>Modern tractor services</h2>
+                        <p>Arrange tractor services or rental for your farm operations.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="services-cta">
+                <div>
+                    <p class="services-eyebrow">NEED A HAND?</p>
+                    <h2>Tell us what your farm needs.</h2>
+                </div>
+                <a class="services-button" href="contact.html">Contact our team <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="footer-logo" href="home.html" aria-label="Farmtastic home">
+            <img src="logos/Screenshot_14-3-2024_155557_looka.com.jpeg" alt="Farmtastic logo">
+        </a>
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="features.html">Features</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="footer-meta">
+            <a class="footer-join" href="signup.html">Join Farmtastic <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <p>Copyright © <span data-current-year>2026</span> Farmtastic</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="services-auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

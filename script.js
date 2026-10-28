@@ -1,6 +1,9 @@
 // Home (Slideshow images)
  document.addEventListener('scroll', () => {
      const header = document.querySelector('header');
+     if (!header) {
+         return;
+     }
 
      if (window.scrollY > 0) {
          header.classList.add('scrolled');
@@ -36,7 +39,10 @@ window.onscroll=()=>{
         if(top>offset && top<offset + height){
             navLink.forEach(links=>{
                 links.classList.remove('active')
-                document.querySelector('header nav a[href*='+id+']').classList.add('active')
+                const activeLink = document.querySelector('header nav a[href*='+id+']')
+                if (activeLink) {
+                    activeLink.classList.add('active')
+                }
             })
         }
     })
@@ -65,6 +71,10 @@ valueDisplays.forEach((valueDisplays) => {
 const toTop = document.querySelector(".to-top");
 
 window.addEventListener("scroll", () => {
+    if (!toTop) {
+        return;
+    }
+
     if (window.pageYOffset > 100) {
         toTop.classList.add("active");
     } else {
@@ -84,3 +94,7 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
+
+document.querySelectorAll('[data-current-year]').forEach((year) => {
+    year.textContent = new Date().getFullYear();
+});

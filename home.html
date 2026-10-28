@@ -13,6 +13,7 @@
     <!-- CSS Link -->
     <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/footer.css">
 
     <!-- FontAwesome Icons -->
     <script src="https://kit.fontawesome.com/e405f872e6.js" crossorigin="anonymous"></script>
@@ -21,12 +22,12 @@
     <!-- Header NavBar -->
     <header> 
         <nav>
-            <img src="logos/Screenshot_14-3-2024_155557_looka.com.jpeg" alt="header-logo">
+            <img src="logos/Screenshot_14-3-2024_155557_looka.com.jpeg" alt="Farmtastic logo">
             <ul class="header-nav">
                 <li class="hideOnMobile"><a href="home.html" class="active">Home</a></li>
                 <li class="hideOnMobile"><a href="about.html">About</a></li>
                 <li class="hideOnMobile"><a href="features.html">Features</a></li>
-                <li class="hideOnMobile"><a href="features.html#services">Services</a></li>
+                <li class="hideOnMobile"><a href="services.html">Services</a></li>
                 <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
                 <div class="header-icons">
                     <a href="#"><i class="fa-brands fa-twitter"></i></a>
@@ -42,27 +43,98 @@
                 <li><a href="home.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="features.html">Features</a></li>
-                <li><a href="features.html#services">Services</a></li>
+                <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>        
         </nav>
     </header> 
     
-        <!-- Landing Page Section -->
-        <section id="home">
-            <div class="outer">
-                <div class="details">
-                    <h1>Welcome to <span>FARMTASTIC!</span></h1>
-                    <h3>Give your farm a chance to flourish and <br><span>GLOW GREEN!</span></h3>
-                    <div class="center">
-                        <button id="show-login" onclick="redirectToPage()">Join Us</button>
-                    </div>
+        <main>
+        <section id="home" aria-labelledby="hero-title">
+            <div class="hero-backgrounds" aria-hidden="true">
+                <div class="hero-background hero-background-one"></div>
+                <div class="hero-background hero-background-two"></div>
+                <div class="hero-background hero-background-three"></div>
+                <div class="hero-background hero-background-four"></div>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p class="eyebrow">GOOD THINGS GROW HERE</p>
+                <h1 id="hero-title">A brighter future<br>for <span>your farm.</span></h1>
+                <p class="hero-description">Practical support for every season—from expert guidance and workshops to veterinary care, farmer connections, and equipment.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="signup.html" data-auth-cta>
+                        <span>Join the Farmtastic community</span>
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                    <a class="button button-secondary" href="#what-we-do">Discover what we do</a>
                 </div>
-            </div>   
+            </div>
+            <a class="scroll-cue" href="#what-we-do">
+                <span>Scroll to explore</span>
+                <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+            </a>
         </section>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+        <section id="what-we-do" class="home-services" aria-labelledby="services-title">
+            <div class="section-heading">
+                <p class="eyebrow">GROW WITH CONFIDENCE</p>
+                <h2 id="services-title">Support for the work you do</h2>
+                <p>Farming takes know-how, care, and a community behind you. Find practical support for the things that matter on your farm.</p>
+            </div>
+            <div class="home-service-grid">
+                <article class="home-service-card">
+                    <div class="service-icon"><i class="fa-solid fa-seedling" aria-hidden="true"></i></div>
+                    <h3>Learn and grow</h3>
+                    <p>Build your skills with farming consultations and workshops designed to help your farm flourish.</p>
+                    <a href="services.html">Explore our services <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </article>
+                <article class="home-service-card">
+                    <div class="service-icon"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i></div>
+                    <h3>Care for your animals</h3>
+                    <p>Get veterinary support for your cattle and poultry, from routine check-ups to more specialized care.</p>
+                    <a href="services.html">See veterinary services <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </article>
+                <article class="home-service-card">
+                    <div class="service-icon"><i class="fa-solid fa-people-group" aria-hidden="true"></i></div>
+                    <h3>Connect with farmers</h3>
+                    <p>Meet other farmers, exchange ideas, and build connections that support your work.</p>
+                    <a href="services.html">Meet the community <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </article>
+            </div>
+            <div class="home-bottom-cta">
+                <div>
+                    <p class="eyebrow">LET'S GROW TOGETHER</p>
+                    <h2>There’s room to grow with Farmtastic.</h2>
+                </div>
+                <a class="button button-primary" href="contact.html">Talk to our team <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+        </section>
+        </main>
 
+    <footer class="site-footer">
+        <a class="footer-logo" href="home.html" aria-label="Farmtastic home">
+            <img src="logos/Screenshot_14-3-2024_155557_looka.com.jpeg" alt="Farmtastic logo">
+        </a>
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="about.html">About</a>
+            <a href="features.html">Features</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="footer-meta">
+            <a class="footer-join" href="signup.html" data-auth-cta>
+                <span>Join Farmtastic</span>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <p>Copyright © <span data-current-year>2026</span> Farmtastic</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="home-auth.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

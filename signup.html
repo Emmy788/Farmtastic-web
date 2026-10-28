@@ -3,35 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmtastic Sign Up</title>
-
-    <!-- CSS Link -->
+    <title>Join Farmtastic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/signup.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <script src="https://kit.fontawesome.com/e405f872e6.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <div class="logo">
-        <img src="logos/Screenshot_14-3-2024_155557_looka.com.jpeg" alt="header-logo">
-    </div>
-    
-    <div class="container">
-        <h2>Sign up</h2>
-        <form id="signup-form">
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+<body class="auth-page">
+    <main class="auth-main">
+        <section class="auth-panel" aria-label="Create a Farmtastic account">
+            <div class="auth-story">
+                <a class="auth-brand" href="home.html" aria-label="Farmtastic home">
+                    <img src="logos/Screenshot_14-3-2024_155557_looka.com.jpeg" alt="Farmtastic logo">
+                    <span>FARMTASTIC</span>
+                </a>
+                <div class="auth-story-copy">
+                    <p class="auth-eyebrow">GROW WITH US</p>
+                    <h1>Good things grow when we grow together.</h1>
+                    <p>Join a community built around practical farming knowledge, healthier animals, and a greener future.</p>
+                </div>
+                <p class="auth-story-note"><i class="fa-solid fa-seedling" aria-hidden="true"></i> Practical support for every season</p>
             </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit">Sign Up</button>
-        </form>
-    </div>
 
+            <div class="auth-card">
+                <p class="auth-eyebrow">GET STARTED</p>
+                <h2>Create your account</h2>
+                <p class="auth-card-intro">Join Farmtastic and grow your farming community.</p>
+                <form id="signup-form">
+                    <div class="auth-form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Choose a username" autocomplete="username" minlength="2" maxlength="50" required>
+                    </div>
+                    <div class="auth-form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+                    </div>
+                    <div class="auth-form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Create a password" autocomplete="new-password" minlength="8" required>
+                    </div>
+                    <p class="auth-message" id="auth-message" role="status" aria-live="polite" hidden></p>
+                    <button class="auth-submit" type="submit">Create account <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                </form>
+                <p class="auth-switch">Already have an account? <a href="login.html">Log in</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="footer-logo" href="home.html" aria-label="Farmtastic home">
+            <img src="logos/Screenshot_14-3-2024_155557_looka.com.jpeg" alt="Farmtastic logo">
+        </a>
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="features.html">Features</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="footer-meta">
+            <p>Copyright © <span data-current-year>2026</span> Farmtastic</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="auth.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,119 +1,253 @@
 /* Contact */
 #contact{
-    display: inline-block;
+    display: block;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 9rem 9% 5rem;
+    background: #fff;
 }
-#contact h2{
+.contact-intro{
+    max-width: 760px;
+    margin: 0 auto 4rem;
     text-align: center;
+}
+.contact-eyebrow{
+    margin-bottom: .8rem;
+    color: #438d4b;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: .15em;
+}
+.contact-intro h1{
+    color: #203a2b;
+    font-size: clamp(2.5rem, 5vw, 4.2rem);
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -.035em;
+}
+.contact-intro > p:last-child{
+    max-width: 620px;
+    margin: 1rem auto 0;
+    color: #647064;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+.team{
+    max-width: 1180px;
+    margin: 0 auto;
 }
 .contact-title{
     text-align: center;
-    font-size: 30px;
-    font-weight: 400;
-    border-bottom: #afb7be solid 1px;
+    color: #203a2b;
+    font-size: clamp(1.7rem, 3.3vw, 2.5rem);
+    font-weight: 600;
+    letter-spacing: -.02em;
 }
 .team-row{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: block;
 }
 .img-fluid{
-    width: 230px;
-    height: 230px;
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
 }
 .card-deck{
-    display: flex;
-    flex-direction: row;
-    margin-top: 50px;
-    vertical-align: top;
-
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+    margin-top: 2rem;
 }
 .card{
+    min-width: 0;
     border-radius: 10px;
-    margin-right: 50px;
     position: relative;
     overflow: hidden;
-    border: #d3d8d3 solid 2px;
-    transition: border .4s;
-    background: #e5ecf3;
+    border: 1px solid #e6e9df;
+    background: #fff;
+    box-shadow: 0 12px 35px rgba(32, 58, 43, .06);
+    transition: transform .2s ease, box-shadow .2s ease;
 }
 .card:hover{
-    border: rgb(101, 204, 101) solid 3px;
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(32, 58, 43, .12);
+}
+.card-title h3{
+    color: #203a2b;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+.card-subtitle h5{
+    margin-top: .2rem;
+    color: #438d4b;
+    font-size: .9rem;
+    font-weight: 500;
 }
 .card-text {
+    margin-top: .45rem;
+    color: #647064;
     font-size: 15px;
+    line-height: 1.6;
 }
 .team-socials i{
     font-size: 20px;
-    margin-left: 20px;
-    margin-top: 25px;
-    transition: color .4s;
+    margin: 20px 14px 0 0;
+    color: #647064;
+    transition: color .2s ease;
 }
 .team-socials i:hover{
-    color: rgb(101, 204, 101);
+    color: #438d4b;
 }
 .card-body{
-    margin-left: 10px;
+    padding: 16px;
 }
 .feedback{
-    margin-top: 40px;
-    
+    width: 100%;
+    max-width: 1000px;
+    margin: 5rem auto 0;
+    padding: clamp(24px, 5vw, 48px);
+    border: 1px solid #e3e9e2;
+    border-radius: 14px;
+    background: #f7f8f3;
+}
+.feedback-heading{
+    max-width: 650px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+.feedback-heading h3{
+    color: #203a2b;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 600;
+}
+.feedback-heading p{
+    margin-top: 8px;
+    color: #647064;
+    font-size: .95rem;
+    line-height: 1.7;
 }
 form{
-    display: inline-block;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+}
+.form-field{
+    min-width: 0;
+}
+.form-field label{
+    display: block;
+    margin-bottom: 7px;
+    color: #334536;
+    font-size: .9rem;
+    font-weight: 500;
+}
+.form-message{
+    grid-column: 1 / -1;
 }
 .input-group i{
-    margin-left: 10px;
-
+    flex-shrink: 0;
+    margin-left: 12px;
+    color: #748174;
 }
 .input-group{ 
-    padding: 15px;
-    border: #a49f9f solid 1px;
-    position: relative;
+    min-height: 54px;
+    padding: 12px 14px;
+    border: #d3dbd1 solid 1px;
+    border-radius: 7px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
     width: 100%;
+    background: #fff;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+.input-group:focus-within{
+    border-color: #438d4b;
+    box-shadow: 0 0 0 3px rgba(67, 141, 75, .12);
+}
+.input-group input,
+.input-group textarea{
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+    background: transparent;
+    color: #203a2b;
+    font-size: .95rem;
+}
+.input-group input::placeholder,
+.input-group textarea::placeholder{
+    color: #909a90;
+}
+.input-group textarea{
+    min-height: 150px;
+    resize: vertical;
+    line-height: 1.6;
 }
 label{
     font-weight: 500;
 }
-@media only screen and (max-width: 769px){
+@media only screen and (max-width: 1000px){
+    #contact{
+        padding-right: 7%;
+        padding-left: 7%;
+    }
     .card-deck{
-        flex-direction: column;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .card-deck{
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        gap: 16px;
+        margin-top: 28px;
     }
     .card{
-        width: 80%;
-        margin-bottom: 10px;
+        width: 100%;
+        max-width: 440px;
+    }
+    .contact-title{
+        font-size: 1.35rem;
+    }
+    .contact-intro{
+        margin-bottom: 3rem;
+    }
+    .feedback{
+        margin-top: 44px;
+        padding: 24px 18px;
+    }
+    form{
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+    .form-message{
+        grid-column: auto;
     }
 }
 .submit{
-    background: green;
-    padding: 10px;
-    font-size: 18px;
-    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    grid-column: 1 / -1;
+    justify-self: start;
+    background: #438d4b;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 7px;
     color: #fff;
-    transition: color .4s ease-in-out;
+    cursor: pointer;
+    transition: color .2s ease-in-out, background-color .2s ease-in-out;
 }
 .submit:hover{
-    color: green;
+    color: #438d4b;
     background: #fff;
-    border: 1px solid green;
-}
-/* Footer */
-footer{
-    background-color:  #e9ecef;
-    padding: 3px;
-    text-align: center;
-    display: flex;
-}
-.footer-logo img{
-    width: 200px;
-    height: 90px;
-}
-.footer-logo{
-    display: flex;
-}
-footer p{
-    margin:20px 200px;
+    border: 1px solid #438d4b;
 }
