@@ -24,10 +24,11 @@ Farmtastic is a multi-page website designed for an agribusiness brand. Built as 
 ---
 
 ## Preview
-
-<img width="1917" height="848" alt="image" src="https://github.com/user-attachments/assets/59af7710-4018-4c69-8b1a-07e71e5702f9" />
-<img width="1919" height="848" alt="image" src="https://github.com/user-attachments/assets/131fa7bf-cd77-4a51-ab0a-e0fe649bd5ca" />
-<img width="1920" height="841" alt="image" src="https://github.com/user-attachments/assets/a293ace9-a069-45b8-8add-7a3673169a7d" />
+<img width="1902" height="841" alt="image" src="https://github.com/user-attachments/assets/086f7cf1-1034-473c-ad91-e03badbb5e72" />
+<img width="1890" height="836" alt="image" src="https://github.com/user-attachments/assets/370c57bb-bc44-4213-b1c0-8dc84ab8484d" />
+<img width="1917" height="852" alt="image" src="https://github.com/user-attachments/assets/b94afd62-4b24-42b0-a6f4-e72b5e1132a6" />
+<img width="1913" height="846" alt="image" src="https://github.com/user-attachments/assets/8f41a678-e09b-42e6-aae4-3cb67e65e8a2" />
+<img width="1889" height="839" alt="image" src="https://github.com/user-attachments/assets/270f4fa8-3c07-4086-abae-932b56e970ef" />
 
 ---
 
@@ -38,13 +39,14 @@ git clone https://github.com/Emmy788/Farmtastic-web.git
 cd Farmtastic-web
 ```
 
-Serve the project from a local web server (rather than opening the pages as `file://` URLs):
+Run the site from a local web server rather than opening the files directly:
 
-```bash
-python -m http.server 8000
-```
+- **VS Code Live Server (recommended):** open the project folder, right-click `home.html`, and choose **Open with Live Server**. The site runs at `http://127.0.0.1:5500/home.html`.
+- **Python alternative:** run `python -m http.server 8000` and open `http://localhost:8000/home.html`.
 
-Then open `http://localhost:8000/home.html`.
+Live Server's port can change (for example to 5501) if 5500 is busy. Check the address bar and use that address in the Supabase settings below.
+
+---
 
 ## Supabase setup
 
@@ -68,7 +70,15 @@ The schema does not create an admin dashboard. Staff can review or update reques
 - Creating a full hero section with background image and overlay text
 - Designing a consistent navbar with logo and social media icons across pages
 - Applying branding (colours, typography, logo) consistently throughout a site
-
+- Using **Supabase** as a backend for a static website:
+  - **Authentication:** connecting the sign-up and login forms to Supabase Auth, so accounts are created and checked securely instead of storing passwords myself
+  - **Database:** setting up PostgreSQL tables (farmer profiles and service requests) by running a SQL schema in the Supabase SQL Editor
+  - **Row-level security:** writing policies so each signed-in user can only read and change their own records
+  - **Configuration:** keeping the project URL and publishable key in a local config file that stays out of the repository, and never exposing the secret key in browser code
+  - **Redirects and email settings:** setting allowed redirect URLs and handling email confirmation and rate limits
+- Giving users feedback with success and error messages, and redirecting them after login
+- Debugging real problems, including relative file paths in CSS and mismatched local addresses (`localhost` vs `127.0.0.1`)
+  
 ---
 
 ## Built at
